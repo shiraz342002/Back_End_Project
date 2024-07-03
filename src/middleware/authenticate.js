@@ -15,9 +15,7 @@ export const authenticate = (req, res, next) => {
 
 	try {
 		req.user = jwt.verify(bearerToken, config.env.jwtSecret);
-		// decoded payload will be available in req.user
 		next();
-		// if token is valid, then next() will be called
 	} catch (error) {
 		httpResponse.UNAUTHORIZED(res, "Token is not valid", "Invalid token.");
 	}
