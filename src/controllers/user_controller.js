@@ -17,7 +17,7 @@ export const UserController = {
 	getById:async(req,res)=>{
 		try{
 			const data = await UserService.getById(req.params.id)
-			return httpResponse.CREATED(res,data);
+			return httpResponse.SUCCESS(res,data);
 		}catch(err){
 			return httpResponse.INTERNAL_SERVER_ERROR(res,err)
 		}
