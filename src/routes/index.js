@@ -8,7 +8,7 @@ const protectedRouter = express.Router();
 const unProtectedRouter = express.Router();
 
 // Protected Routes
-protectedRouter.use()
+protectedRouter.use("/file",fileRoute)
 
 // Un-Protected Routes
 unProtectedRouter.use("/user", userRoute);

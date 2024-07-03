@@ -9,7 +9,9 @@
       "first_name": "Dwayne",
       "last_name": "Johnson",
       "email": "therock@example.com",
-      "password": "passwordTwo456"
+      "password": "passwordTwo456",
+      "TOKEN":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY2ODUyZGJmNjgwMTNjODdjM2FhOTJmNyIsImZpcnN0X25hbWUiOiJEd2F5bmUiLCJsYXN0X25hbWUiOiJKb2huc29uIiwiZW1haWwiOiJ0aGVyb2NrQGV4YW1wbGUuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkelo5b2RLUXlqcVZyUzVjRFhuM1lidUY3LzBUNjVtUU1jUy92bFUwaUw5eDhHNXFVV0pVeUsiLCJjcmVhdGVkQXQiOiIyMDI0LTA3LTAzVDEwOjUzOjUxLjA4OFoiLCJ1cGRhdGVkQXQiOiIyMDI0LTA3LTAzVDEwOjUzOjUxLjA4OFoiLCJfX3YiOjB9LCJpYXQiOjE3MjAwMTAwMzV9.Ykk9p4FzcuvZOfyRzvQKq_JuEUAFWufinvb30PjxDjY"
+
     },
     {
       "first_name": "Steve",

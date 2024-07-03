@@ -3,7 +3,7 @@ export const FileService={
     getAll:async()=>{
         return FileModel.find();
     },
-    getById:async()=>{
+    getById:async(id)=>{
         return FileModel.findById(id)
     },
     add:async(body)=>{

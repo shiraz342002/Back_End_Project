@@ -34,13 +34,23 @@ export const FileController = {
             return httpResponse.INTERNAL_SERVER_ERROR(res,err)
         }
     }],
-    deleteFileById : [authenticate , async (req, res) => {
+    deleteFileById: async (req, res) => {
         try {
-            const file = await FileService.findByIdAndDelete(req.params.id);
-            return httpResponse.SUCCESS(res,file);
+          const file = await FileService.getById(req.params.id);
+          if (!file) {
+            return httpResponse.NOT_FOUND(res, "File not found");
+          }
+          console.log("file found");
+          const deletedFile = await FileService.delete(req.params.id)
+          if (!deletedFile) {
+            return httpResponse.INTERNAL_SERVER_ERROR(res, "Failed to delete file");
+          }
+    
+          // Return success response with the deleted file data
+          return httpResponse.SUCCESS(res, deletedFile);
         } catch (err) {
-            return httpResponse.INTERNAL_SERVER_ERROR(res,err)
+          console.error("Error deleting file:", err);
+          return httpResponse.INTERNAL_SERVER_ERROR(res, err.message || "Internal server error");
         }
-    }]
-};
-
+      }
+    };
