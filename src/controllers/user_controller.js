@@ -25,7 +25,7 @@ export const UserController = {
 	add: async (req, res) => {
 		try {
 			const salt = await bcrypt.genSalt();
-			const hashed_pw=await bcrypt.hash(req.body.password,salt);
+			const hashed_pw=await bcrypt.hash(req.body.password,10);
 			req.body.password=hashed_pw;
 			const data = await UserService.add(req.body);
 			return httpResponse.CREATED(res, data);
@@ -55,10 +55,19 @@ export const UserController = {
 			if(!exsist_user){
 			return httpResponse.NOT_FOUND(res,"User not found")
 			}
-			const auth=await bcrypt.compare(exsist_user.password,req.body.password)
+			const auth=await bcrypt.compare(req.body.password,exsist_user.password)
+			// console.log(exsist_user.password);
+			// console.log(req.body.password);
+			// console.log(config.env.jwtSecret);
+			// console.log("Your pass is verified");
 			if(auth){
+				// console.log("Ok your pass is verified");
+				
 				const j_token = jwt.sign({ user: exsist_user }, config.env.jwtSecret);
-				return httpResponse.SUCCESS(res,j_token)
+				return httpResponse.SUCCESS(res, {
+					message: "Token generated successfully",
+					token: j_token
+				  });
 			}else{
 				return httpResponse.NOT_FOUND(res,"Enter Correct User");
 			}

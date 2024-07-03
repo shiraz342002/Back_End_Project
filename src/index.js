@@ -6,9 +6,9 @@ import config from "./config/index.js";
 async function startServer() {
 	const app = express();
 	await loaders.init({ expressApp: app });
-
-	const server = app.listen(config.env.port, () =>
-		console.log(`Server Started ~ :${config.env.port}`)
+	const port =3000;
+	const server = app.listen(port, () =>
+		console.log(`Server Started ~ at ${port}`)
 	);
 
 	process.on("uncaughtException", (err) => {

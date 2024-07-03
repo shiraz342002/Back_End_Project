@@ -1,7 +1,7 @@
 import express from "express";
 
 // routes
-import userRoute from "./user.route.js";
+import userRoute from "./user.js";
 
 const protectedRouter = express.Router();
 const unProtectedRouter = express.Router();

@@ -1,0 +1,33 @@
+[
+    {
+      "first_name": "Phil",
+      "last_name": "Brooks",
+      "email": "cmpunk@example.com",
+      "password": "passwordOne123"
+    },
+    {
+      "first_name": "Dwayne",
+      "last_name": "Johnson",
+      "email": "therock@example.com",
+      "password": "passwordTwo456"
+    },
+    {
+      "first_name": "Steve",
+      "last_name": "Austin",
+      "email": "stonecold@example.com",
+      "password": "passwordThree789"
+    },
+    {
+      "first_name": "John",
+      "last_name": "Cena",
+      "email": "johncena@example.com",
+      "password": "passwordFour101"
+    },
+    {
+      "first_name": "Paul",
+      "last_name": "Levesque",
+      "email": "tripleh@example.com",
+      "password": "passwordFive202"
+    }
+  ]
+  
