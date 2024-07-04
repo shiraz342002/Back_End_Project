@@ -14,7 +14,7 @@ const schema = mongoose.Schema(
       required: true,
     },
     thumbnail_id: {
-      type: Number,
+      type: String,
       required: true,
     },
   },

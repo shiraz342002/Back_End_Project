@@ -1,9 +1,9 @@
-import {SeasonService} from "../services/index.js"
+import {EpisodeService} from "../services/index.js"
 import { httpResponse } from "../utils/httpResponse.js"
-export const SeasonController={
+export const EpisodeController={
     getAll:async(req,res)=>{
         try{
-            const data = await SeasonService.getAll();
+            const data = await EpisodeService.getAll();
             return httpResponse.SUCCESS(res,data);
         }catch(err){
             return httpResponse.INTERNAL_SERVER_ERROR(res,err);
@@ -11,7 +11,7 @@ export const SeasonController={
     },
     getById:async(req,res)=>{
 		try{
-			const data = await SeasonService.getById(req.params.id)
+			const data = await EpisodeService.getById(req.params.id)
 			return httpResponse.SUCCESS(res,data);
 		}catch(err){
 			return httpResponse.INTERNAL_SERVER_ERROR(res,err)
@@ -20,7 +20,9 @@ export const SeasonController={
     add : async (req, res) => {
         try{
           // console.log("adding");  
-			const data = await SeasonService.add(req.body)
+			const data = await EpisodeService.add(req.body)
+      console.log("Added");
+      
 			return httpResponse.CREATED(res,data);
 		}catch(err){
 			return httpResponse.INTERNAL_SERVER_ERROR(res,err)
@@ -28,7 +30,7 @@ export const SeasonController={
     },
     updateFileById: async (req, res) => {
         try {
-            const file = await SeasonService.update(req.params.id, req.body, { new: true, runValidators: true });
+            const file = await EpisodeService.update(req.params.id, req.body, { new: true, runValidators: true });
             if (!file) {
                 return httpResponse.NOT_FOUND(res, 'File not found');
             }
@@ -40,12 +42,12 @@ export const SeasonController={
     },
     deleteFileById: async (req, res) => {
         try {
-          const file = await SeasonService.getById(req.params.id);
+          const file = await EpisodeService.getById(req.params.id);
           if (!file) {
             return httpResponse.NOT_FOUND(res, "File not found");
           }
         // console.log("file found");
-          const deletedFile = await SeasonService.delete(req.params.id)
+          const deletedFile = await EpisodeService.delete(req.params.id)
           if (!deletedFile) {
             return httpResponse.INTERNAL_SERVER_ERROR(res, "Failed to delete file");
           }
