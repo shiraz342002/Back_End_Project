@@ -18,6 +18,7 @@ export const validate = (schema) => (req, res, next) => {
 	return next();
 };
 
+
 const pick = (object, keys) => {
 	return keys.reduce((obj, key) => {
 		if (object && Object.prototype.hasOwnProperty.call(object, key)) {

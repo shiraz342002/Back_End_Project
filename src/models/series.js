@@ -1,3 +1,4 @@
+
 import mongoose from "mongoose";
 const serires_schema = mongoose.Schema(
   {
@@ -9,12 +10,14 @@ const serires_schema = mongoose.Schema(
       type: String,
     },
     trailer_id: {
-      type: Number,
+      type: mongoose.Schema.Types.ObjectId,
+      ref:"File",
       required: true,
     },
     thumbnail_id: {
-      type: Number,
-      requied: true,
+      type: mongoose.Schema.Types.ObjectId,
+      ref:"File",
+      required: true,
     },
   },
   {

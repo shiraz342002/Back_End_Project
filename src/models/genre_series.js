@@ -9,7 +9,7 @@ const genre_series_schema = mongoose.Schema({
     ref: "Series",
   },
 });
-export const GenreSeriesModel = mongoose.model(
-  "GenreSeries",
-  genre_series_schema
-);
+export const GenreSeriesModel = mongoose.model( "Genre Series", genre_series_schema);
+ 
+ 
+
