@@ -20,7 +20,8 @@ const unProtectedRouter = express.Router();
 // protectedRouter.use("/genreseries",genreseriesRoute)
 // protectedRouter.use("/season",seasonRoute)
 // protectedRouter.use("/episode",episodeRoute)
-// 
+// protectedRouter.use("/stream",streamRoute)
+
 
 // Note
 //just for testing purposes I'm including the protected routes as unprotected
@@ -33,7 +34,7 @@ unProtectedRouter.use("/genre",genreRoute)
 unProtectedRouter.use("/genreseries",genreseriesRoute)
 unProtectedRouter.use("/season",seasonRoute)
 unProtectedRouter.use("/episode",episodeRoute)
-unProtectedRouter
+unProtectedRouter.use("/stream",streamRoute)
 
 
 
