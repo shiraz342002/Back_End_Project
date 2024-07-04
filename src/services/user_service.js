@@ -1,4 +1,5 @@
 import { UserModel } from "../models/user.js";
+import { StreamModel } from "../models/stream.js";
 
 export const UserService = {
 	getAll: async () => {
@@ -18,5 +19,25 @@ export const UserService = {
 	},
 	login:async(body)=>{
 		return UserModel.findOne({email:body.email});
-	}
+	},
+	getAllStreamById:async(id)=>{
+		return StreamModel.find({user_id:id}).populate("user_id");
+	  },
+	deleteStreamByUserId: async (user_id,stream_id) => {
+		// console.log("Inside service");
+		// console.log(user_id);
+		// console.log(stream_id);
+		return StreamModel.findOneAndDelete({ _id: stream_id, user_id: user_id });
+	  },
+	  getOneStreamByUserId: async (user_id, stream_id) => {
+		console.log("Im running");
+		return StreamModel.aggregate([
+			{
+				$match: {
+					_id: new mongoose.Types.ObjectId(stream_id),
+					user_id: new mongoose.Types.ObjectId(user_id),
+				},
+			},
+		]);
+	},
 };

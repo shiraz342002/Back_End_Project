@@ -34,7 +34,7 @@ unProtectedRouter.use("/genre",genreRoute)
 unProtectedRouter.use("/genreseries",genreseriesRoute)
 unProtectedRouter.use("/season",seasonRoute)
 unProtectedRouter.use("/episode",episodeRoute)
-unProtectedRouter.use("/stream",streamRoute)
+unProtectedRouter.use("/streams",streamRoute)
 
 
 

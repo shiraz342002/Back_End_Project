@@ -1,6 +1,6 @@
 import { UserService } from "../services/user_service.js";
 import { httpResponse } from "../utils/index.js";
-import bcrypt from "bcrypt"; //user ke password ko hash me karne ke liye
+import bcrypt from "bcrypt";
 import config from "../config/index.js"
 import  jwt  from "jsonwebtoken";
 
@@ -16,6 +16,8 @@ export const UserController = {
 
 	getById:async(req,res)=>{
 		try{
+			console.log("Hello");
+			
 			const data = await UserService.getById(req.params.id)
 			return httpResponse.SUCCESS(res,data);
 		}catch(err){
@@ -74,6 +76,33 @@ export const UserController = {
 		}catch(err){
 			return httpResponse.NOT_FOUND(res,"No user found");
 		}
-	}
-
+	},
+	getAllStreamById:async(req,res)=>{
+		try{
+			const data = await UserService.getAllStreamById(req.params.id)
+			// res.json(data)
+			return httpResponse.SUCCESS(res,data);
+		}catch(err){
+			return httpResponse.INTERNAL_SERVER_ERROR(res,err);
+		}
+	},
+	
+	getOneStreamByUserId: async (req, res) => {
+		try {
+			// console.log(req.params.streamId);
+			// console.log(req.params.id);
+			const data = await UserService.getOneStreamByUserId(req.params.id, req.params.streamId);
+			return httpResponse.SUCCESS(res, data);
+		} catch (error) {
+			return httpResponse.INTERNAL_SERVER_ERROR(res, error);
+		}
+	},
+	  deleteStreamByUserId: async (req, res) => {
+		try {
+			const data = await UserService.deleteStreamByUserId(req.params.id, req.params.streamId);
+			return httpResponse.SUCCESS(res, data);
+		} catch (error) {
+			return httpResponse.INTERNAL_SERVER_ERROR(res, error);
+		}
+	},
 };
