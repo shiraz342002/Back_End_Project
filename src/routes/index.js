@@ -6,7 +6,7 @@ import fileRoute from "./file.js"
 import seriesRoute from "./series.js"
 import genreRoute from "./genre.js"
 import genreseriesRoute from "./genre_series.js"
-import 
+import seasonRoute from "./season.js"
 
 
 const protectedRouter = express.Router();
@@ -17,6 +17,7 @@ const unProtectedRouter = express.Router();
 // protectedRouter.use("/series",seriesRoute)
 // protectedRouter.use("/genre",genreRoute)
 // protectedRouter.use("/genreseries",genreseriesRoute)
+// protectedRouter.use("/season",seasonRoute)
 
 
 //just for testing purposes I'm including the protected routes as unprotected
@@ -26,6 +27,7 @@ unProtectedRouter.use("/user", userRoute);
 unProtectedRouter.use("/series",seriesRoute)
 unProtectedRouter.use("/genre",genreRoute)
 unProtectedRouter.use("/genreseries",genreseriesRoute)
+unProtectedRouter.use("/season",seasonRoute)
 
 
 
