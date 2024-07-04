@@ -97,6 +97,8 @@ export const UserController = {
 			return httpResponse.INTERNAL_SERVER_ERROR(res, error);
 		}
 	},
+
+	
 	  deleteStreamByUserId: async (req, res) => {
 		try {
 			const data = await UserService.deleteStreamByUserId(req.params.id, req.params.streamId);

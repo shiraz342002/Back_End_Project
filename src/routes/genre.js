@@ -5,11 +5,15 @@ import { GenreController } from "../controllers/index.js"
 
 
 const router = express.Router()
+//Basic Crud Api
 router.get("/",GenreController.getAll)
 router.get("/:id",GenreController.getById)
 router.post("/",validate(GenreValidationSchema.create),GenreController.add)
 router.delete("/:id",GenreController.deleteFileById);
 router.patch("/:id",validate(GenreValidationSchema.update),GenreController.updateFileById)
+
+//Aggregation
+router.get("/:id/series/seasons",GenreController.getAllSeasonOfAllSeriesByGenreId)
 
 export default router
 

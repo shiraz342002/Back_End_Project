@@ -57,6 +57,14 @@ export const GenreController={
           console.error("Error deleting file:", err);
           return httpResponse.INTERNAL_SERVER_ERROR(res, err.message || "Internal server error");
         }
+      },
+      getAllSeasonOfAllSeriesByGenreId:async(req,res)=>{
+        try{
+          const data = await GenreServices.getAllSeasonOfAllSeriesByGenreId(req.body.id);
+          return httpResponse.SUCCESS(res,data);
+        }catch(err){
+          return httpResponse.INTERNAL_SERVER_ERROR(res,err)          
+        }
       }
 
 }

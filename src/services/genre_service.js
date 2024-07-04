@@ -16,4 +16,7 @@ export const GenreServices = {
   delete:async (id) => {
     return GenreModel.findByIdAndDelete(id);
   },
+  getAllSeasonOfAllSeriesByGenreId:async(id)=>{
+    
+  }
 };
