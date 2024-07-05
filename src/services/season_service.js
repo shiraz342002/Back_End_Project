@@ -1,3 +1,4 @@
+import { EpisodeModel } from "../models/episode.js";
 import {SeasonModel} from "../models/season.js"
 export const SeasonService={
     getAll:async()=>{
@@ -15,4 +16,7 @@ export const SeasonService={
     delete:async(id)=>{
         return SeasonModel.findByIdAndDelete(id);
     },
+    getEpisodeOfSeasonById:async(id)=>{
+        return EpisodeModel.find({season_id:id})
+    }
 }

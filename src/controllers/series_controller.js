@@ -19,7 +19,7 @@ export const SeriesController={
 	},
     add : async (req, res) => {
         try{
-          console.log("adding");  
+          // console.log("adding");  
 			const data = await SeriesService.add(req.body)
 			return httpResponse.CREATED(res,data);
 		}catch(err){
@@ -54,6 +54,23 @@ export const SeriesController={
           console.error("Error deleting file:", err);
           return httpResponse.INTERNAL_SERVER_ERROR(res, err.message || "Internal server error");
         }
+      },
+      getAllSeasonsOfSeriesBySeriesId:async(req,res)=>{
+        try{
+          // console.log(req.params.id);
+          const data = await SeriesService.getAllSeasonsOfSeriesBySeriesId(req.params.id);
+          return httpResponse.SUCCESS(res,data);
+        }catch(err){
+          return httpResponse.INTERNAL_SERVER_ERROR(res,err);
+        }
+      },
+      getAllEpisodesOfSeriesById:async(req,res)=>{
+        try{
+          const data = await SeriesService.getAllEpisodesOfSeriesById(req.params.id);
+          return httpResponse.SUCCESS(res,data);
+        }catch(err){
+          return httpResponse.INTERNAL_SERVER_ERROR(res,err);
       }
+    }
 
 }

@@ -53,8 +53,16 @@ export const EpisodeController={
           }
           return httpResponse.SUCCESS(res, deletedFile);
         } catch (err) {
-          console.error("Error deleting file:", err);
-          return httpResponse.INTERNAL_SERVER_ERROR(res, err.message || "Internal server error");
+          // console.error("Error deleting file:", err);
+          return httpResponse.INTERNAL_SERVER_ERROR(res, err);
+        }
+      },
+      getStreamsOfEpisodeById:async(req,res)=>{
+        try{
+          const data = await EpisodeService.getStreamsOfEpisodeById();
+          return httpResponse.SUCCESS(res,data);
+        }catch(err){
+          return httpResponse.INTERNAL_SERVER_ERROR(res,err);
         }
       }
 

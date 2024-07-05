@@ -54,6 +54,14 @@ export const SeasonController={
           console.error("Error deleting file:", err);
           return httpResponse.INTERNAL_SERVER_ERROR(res, err.message || "Internal server error");
         }
+      },
+      getEpisodeOfSeasonById:async(req,res)=>{
+        try{
+          const data = await SeasonService.getEpisodeOfSeasonById(req.params.id);
+          return httpResponse.SUCCESS(res,data);
+        }catch(err){
+          return httpResponse.NOT_FOUND(res,data);
+        }
       }
 
 }
