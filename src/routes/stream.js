@@ -11,7 +11,8 @@ router.post("/",validate(StreamValidationSchema.create),StreamController.add)
 router.delete("/:id",StreamController.deleteFileById);
 router.patch("/:id",validate(StreamValidationSchema.update),StreamController.updateFileById)
 router.get("/:id/episode",StreamController.getEpisodeOfStreamById)
-
+router.get("/:id/user",StreamController.getUserOfStreamById)
+router.get("/:id/episode/season",StreamController.getSeasonOfEpisodeOfStreamByID)
 export default router
 
 //Notes

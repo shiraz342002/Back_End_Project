@@ -63,8 +63,25 @@ export const StreamController={
           }
           return httpResponse.SUCCESS(res, data.episode_id);
         } catch (err) {
-          return httpResponse.INTERNAL_SERVER_ERROR(res, err.message);
+          return httpResponse.INTERNAL_SERVER_ERROR(res, err);
         }
+      },
+      getUserOfStreamById:async(req,res)=>{
+        try{
+          const data = await StreamService.getUserOfStreamById(req.params.id);
+          return httpResponse.SUCCESS(res,data);
+        }catch(err){
+          return httpResponse.INTERNAL_SERVER_ERROR(res,err);
+        }
+      },
+      getSeasonOfEpisodeOfStreamByID:async(req,res)=>{
+        try{
+          const data = await StreamService.getSeasonOfEpisodeOfStreamByID(req.params.id);
+          return httpResponse.SUCCESS(res,data);
+        }catch(err){
+          return httpResponse.INTERNAL_SERVER_ERROR(res,err);
+        }
+
       }
 
 }
