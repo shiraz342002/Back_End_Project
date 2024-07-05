@@ -52,7 +52,18 @@ export const StreamController={
           return httpResponse.SUCCESS(res, deletedFile);
         } catch (err) {
           console.error("Error deleting file:", err);
-          return httpResponse.INTERNAL_SERVER_ERROR(res, err.message || "Internal server error");
+          return httpResponse.INTERNAL_SERVER_ERROR(res, err);
+        }
+      },
+     getEpisodeOfStreamById:async (req, res) => {
+        try {
+          const data = await StreamService.getEpisodeOfStreamById(req.params.id);
+          if (!data) {
+            return httpResponse.NOT_FOUND(res, 'Stream not found');
+          }
+          return httpResponse.SUCCESS(res, data.episode_id);
+        } catch (err) {
+          return httpResponse.INTERNAL_SERVER_ERROR(res, err.message);
         }
       }
 
