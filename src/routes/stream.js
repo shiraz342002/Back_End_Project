@@ -10,10 +10,12 @@ router.get("/:id",StreamController.getById)
 router.post("/",validate(StreamValidationSchema.create),StreamController.add)
 router.delete("/:id",StreamController.deleteFileById);
 router.patch("/:id",validate(StreamValidationSchema.update),StreamController.updateFileById)
-router.get("/:id/episode",StreamController.getEpisodeOfStreamById)
-router.get("/:id/user",StreamController.getUserOfStreamById)
-router.get("/:id/episode/season",StreamController.getSeasonOfEpisodeOfStreamByID)
-export default router
 
+router.get("/:id/episode",StreamController.get_Episode_Of_StreamBy_Id)
+router.get("/:id/user",StreamController.get_User_Of_StreamBy_Id)
+router.get("/:id/episode/season",StreamController.get_Season_Of_Episode_Of_A_Stream_By_Id)
+router.get("/:id/episode/season/series",StreamController.get_Series_Of_Season_Of_Episode_Of_Stream_By_Id)
+router.get("/:id/episode/season/series/genre",StreamController.get_Genre_Of_Series_Of_Season_Of_Episode_Of_Stream_By_Id)
+export default router
 //Notes
 // Removing authenticate from patch and delete for testing 

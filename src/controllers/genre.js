@@ -58,9 +58,18 @@ export const GenreController={
           return httpResponse.INTERNAL_SERVER_ERROR(res, err.message || "Internal server error");
         }
       },
+      getAllSeriesByGenreId:async(req,res)=>{
+        try{
+         
+          const data = await GenreServices.getAllSeriesByGenreId(req.params.id);
+          return httpResponse.SUCCESS(res,data);
+        }catch(err){
+          return httpResponse.INTERNAL_SERVER_ERROR(res,err)          
+        }
+      },
       getAllSeasonOfAllSeriesByGenreId:async(req,res)=>{
         try{
-          const data = await GenreServices.getAllSeasonOfAllSeriesByGenreId(req.body.id);
+          const data = await GenreServices.getAllSeasonOfAllSeriesByGenreId(req.params.id);
           return httpResponse.SUCCESS(res,data);
         }catch(err){
           return httpResponse.INTERNAL_SERVER_ERROR(res,err)          

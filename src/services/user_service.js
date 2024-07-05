@@ -1,5 +1,6 @@
 import { UserModel } from "../models/user.js";
 import { StreamModel } from "../models/stream.js";
+import mongoose from "mongoose";
 
 export const UserService = {
 	getAll: async () => {
@@ -30,22 +31,21 @@ export const UserService = {
 		return StreamModel.findOneAndDelete({ _id: stream_id, user_id: user_id });
 	  },
 	  getOneStreamByUserId: async (user_id, stream_id) => {
-		//   console.log(user_id);
-		//   console.log(stream_id);
-		//   console.log("Im running");
-
-	// 	return StreamModel.aggregate([
-	// 		{
-	// 		$match: {
-	// 				_id: new mongoose.Types.ObjectId(stream_id),
-	// 				user_id: new mongoose.Types.ObjectId(user_id),
-	// 			},
-	// 		},
-	// ]);
-		  const stream = await StreamModel.findOne({
-			_id: stream_id,
-			user_id: user_id
-		});
-		return stream;
+	console.log('ok ', new mongoose.Types.ObjectId(stream_id));
+	// console.log("Im running");
+	
+		return StreamModel.aggregate([
+			{
+			$match: {
+					_id: new mongoose.Types.ObjectId(stream_id),
+					user_id: new mongoose.Types.ObjectId(user_id),
+				},
+			},
+	]);
+		//   const stream = await StreamModel.findOne({
+		// 	_id: stream_id,
+		// 	user_id: user_id
+		// });
+		// return stream;
 	},
 };

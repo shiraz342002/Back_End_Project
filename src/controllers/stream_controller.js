@@ -55,9 +55,9 @@ export const StreamController={
           return httpResponse.INTERNAL_SERVER_ERROR(res, err);
         }
       },
-     getEpisodeOfStreamById:async (req, res) => {
+      get_Episode_Of_StreamBy_Id:async (req, res) => {
         try {
-          const data = await StreamService.getEpisodeOfStreamById(req.params.id);
+          const data = await StreamService.get_Episode_Of_StreamBy_Id(req.params.id);
           if (!data) {
             return httpResponse.NOT_FOUND(res, 'Stream not found');
           }
@@ -66,22 +66,37 @@ export const StreamController={
           return httpResponse.INTERNAL_SERVER_ERROR(res, err);
         }
       },
-      getUserOfStreamById:async(req,res)=>{
+      get_User_Of_StreamBy_Id:async(req,res)=>{
         try{
-          const data = await StreamService.getUserOfStreamById(req.params.id);
+          const data = await StreamService.get_User_Of_StreamBy_Id(req.params.id);
           return httpResponse.SUCCESS(res,data);
         }catch(err){
           return httpResponse.INTERNAL_SERVER_ERROR(res,err);
         }
       },
-      getSeasonOfEpisodeOfStreamByID:async(req,res)=>{
+      get_Season_Of_Episode_Of_A_Stream_By_Id:async(req,res)=>{
         try{
-          const data = await StreamService.getSeasonOfEpisodeOfStreamByID(req.params.id);
+          const data = await StreamService.get_Season_Of_Episode_Of_A_Stream_By_Id(req.params.id);
           return httpResponse.SUCCESS(res,data);
         }catch(err){
           return httpResponse.INTERNAL_SERVER_ERROR(res,err);
         }
-
+      },
+      get_Series_Of_Season_Of_Episode_Of_Stream_By_Id:async(req,res)=>{
+        try{
+          const data = await StreamService.get_Series_Of_Season_Of_Episode_Of_Stream_By_Id(req.params.id);
+          return httpResponse.SUCCESS(res,data);
+        }catch(err){
+          return httpResponse.INTERNAL_SERVER_ERROR(res,data);
+        }
+      },
+      get_Genre_Of_Series_Of_Season_Of_Episode_Of_Stream_By_Id:async(req,res)=>{
+        try{
+          const data = await StreamService.get_Genre_Of_Series_Of_Season_Of_Episode_Of_Stream_By_Id(req.params.id);
+          return httpResponse.SUCCESS(res,data);
+        }catch(err){
+          return httpResponse.INTERNAL_SERVER_ERROR(res,err);
+        }
       }
 
 }
