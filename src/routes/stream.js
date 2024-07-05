@@ -11,6 +11,7 @@ router.post("/",validate(StreamValidationSchema.create),StreamController.add)
 router.delete("/:id",StreamController.deleteFileById);
 router.patch("/:id",validate(StreamValidationSchema.update),StreamController.updateFileById)
 
+
 export default router
 
 //Notes

@@ -1,4 +1,5 @@
 import {EpisodeModel} from "../models/episode.js"
+import { StreamModel } from "../models/stream.js";
 export const EpisodeService={
     getAll:async()=>{
         return EpisodeModel.find();
@@ -15,4 +16,7 @@ export const EpisodeService={
     delete:async(id)=>{
         return EpisodeModel.findByIdAndDelete(id);
     },
+    getStreamsOfEpisodeById:async(id)=>{
+        return StreamModel.find({episode_id:id})
+    }
 }

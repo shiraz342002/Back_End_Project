@@ -59,7 +59,7 @@ export const EpisodeController={
       },
       getStreamsOfEpisodeById:async(req,res)=>{
         try{
-          const data = await EpisodeService.getStreamsOfEpisodeById();
+          const data = await EpisodeService.getStreamsOfEpisodeById(req.params.id);
           return httpResponse.SUCCESS(res,data);
         }catch(err){
           return httpResponse.INTERNAL_SERVER_ERROR(res,err);
