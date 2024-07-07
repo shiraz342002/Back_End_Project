@@ -50,15 +50,15 @@
   "_id": {
     "$oid": "66852dd968013c87c3aa92fb"
   },
-  "first_name": "John",
+  "first_name": "John Anthony",
   "last_name": "Cena",
-  "email": "johncena@example.com",
+  "email": "johncena@gmail.com",
   "password": "$2b$10$zelsEQOWXfHNsdFftMtNIuiXhz9vdfiXDvhbauomRB7GKcUcK849u",
   "createdAt": {
     "$date": "2024-07-03T10:54:17.910Z"
   },
   "updatedAt": {
-    "$date": "2024-07-03T10:54:17.910Z"
+    "$date": "2024-07-07T16:11:44.952Z"
   },
   "__v": 0
 },
@@ -107,6 +107,22 @@
   },
   "updatedAt": {
     "$date": "2024-07-05T11:00:48.033Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668ad834d7c28d2c043d8734"
+  },
+  "first_name": "mercury",
+  "last_name": "Admin",
+  "email": "admin@example.com",
+  "password": "$2a$10$9aRHKx7LG43SgcTy3vZBX.7eLwaON1gIupDAi/8GTkFk8LMRVO7LW",
+  "createdAt": {
+    "$date": "2024-07-07T18:02:28.107Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-07T18:02:28.107Z"
   },
   "__v": 0
 }]
