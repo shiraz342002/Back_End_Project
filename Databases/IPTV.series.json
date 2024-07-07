@@ -1,0 +1,140 @@
+[{
+  "_id": {
+    "$oid": "668647dc3665cd74275cc266"
+  },
+  "name": "Game of Thrones",
+  "description": "A fantasy drama television series.",
+  "trailer_id": {
+    "$oid": "6686379bf7e77ae34a7d3d76"
+  },
+  "thumbnail_id": {
+    "$oid": "6686379bf7e77ae34a7d3d76"
+  },
+  "createdAt": {
+    "$date": "2024-07-04T06:57:32.863Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T06:57:32.863Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668648273665cd74275cc268"
+  },
+  "name": "Stranger Things",
+  "description": "A supernatural horror boring television series.",
+  "trailer_id": {
+    "$oid": "668637b8f7e77ae34a7d3d78"
+  },
+  "thumbnail_id": {
+    "$oid": "668637b8f7e77ae34a7d3d78"
+  },
+  "createdAt": {
+    "$date": "2024-07-04T06:58:47.394Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T07:04:34.100Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686483c3665cd74275cc26a"
+  },
+  "name": "Breaking Bad",
+  "description": "A crime drama television series.",
+  "trailer_id": {
+    "$oid": "668637c1f7e77ae34a7d3d7a"
+  },
+  "thumbnail_id": {
+    "$oid": "668637c1f7e77ae34a7d3d7a"
+  },
+  "createdAt": {
+    "$date": "2024-07-04T06:59:08.508Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T06:59:08.508Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668648553665cd74275cc26c"
+  },
+  "name": "The Office",
+  "description": "A mockumentary sitcom television series.",
+  "trailer_id": {
+    "$oid": "668637caf7e77ae34a7d3d7c"
+  },
+  "thumbnail_id": {
+    "$oid": "668637caf7e77ae34a7d3d7c"
+  },
+  "createdAt": {
+    "$date": "2024-07-04T06:59:33.132Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T06:59:33.132Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668648873665cd74275cc26e"
+  },
+  "name": "Stranger Things",
+  "description": "A supernatural horror television series.",
+  "trailer_id": {
+    "$oid": "668637d2f7e77ae34a7d3d7e"
+  },
+  "thumbnail_id": {
+    "$oid": "668637d2f7e77ae34a7d3d7e"
+  },
+  "createdAt": {
+    "$date": "2024-07-04T07:00:23.882Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T07:00:23.882Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668648b63665cd74275cc270"
+  },
+  "name": "Narcos",
+  "description": "A crime drama television series.",
+  "trailer_id": {
+    "$oid": "668637f4f7e77ae34a7d3d82"
+  },
+  "thumbnail_id": {
+    "$oid": "668637f4f7e77ae34a7d3d82"
+  },
+  "createdAt": {
+    "$date": "2024-07-04T07:01:10.841Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T07:01:10.841Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6687d14ed9cfdafa65f28a46"
+  },
+  "name": "ShawShank Redemption",
+  "description": "A crime drama television series.",
+  "trailer_id": {
+    "$oid": "6687d126d9cfdafa65f28a44"
+  },
+  "thumbnail_id": {
+    "$oid": "6687d126d9cfdafa65f28a44"
+  },
+  "createdAt": {
+    "$date": "2024-07-05T10:56:14.612Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-05T10:56:14.612Z"
+  },
+  "__v": 0
+}]

@@ -67,6 +67,7 @@ export const StreamService={
         }
         return series;
     },
+    
     get_Genre_Of_Series_Of_Season_Of_Episode_Of_Stream_By_Id:async(id)=>{
         const stream = await StreamModel.findById(id);
         if (!stream) {

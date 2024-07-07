@@ -12,7 +12,8 @@ router.post("/login",validate(UserValidationSchema.login),UserController.login);
 router.patch("/:id",validate(UserValidationSchema.update),UserController.update);
 router.delete("/:id",UserController.delete);
 //Aggregation Routes
-router.get("/:id/streams",UserController.getAllStreamById);            // Working
-router.get("/:id/streams/:streamId",UserController.getOneStreamByUserId) // Working Properly(with find not with aggregate)
-router.delete("/:id/streams/:streamId",UserController.deleteStreamByUserId);//Working
+
+router.get("/:id/streams",UserController.getAllStreamById);
+//Get Streams of Users By Stream id
+router.get("/:id/streams/:streamId",UserController.getOneStreamByUserId)
 export default router

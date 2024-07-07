@@ -1,0 +1,112 @@
+[{
+  "_id": {
+    "$oid": "66852c90ce208516b9a78780"
+  },
+  "first_name": "Phil",
+  "last_name": "Brooks",
+  "email": "cmpunk@example.com",
+  "password": "$2b$10$J5oyR0RmzcV5URHZeFTPCe78shgozNhQpqvcKnf8T/KYp36dnp/dC",
+  "createdAt": {
+    "$date": "2024-07-03T10:48:48.087Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-03T10:48:48.087Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66852dbf68013c87c3aa92f7"
+  },
+  "first_name": "Dwayne",
+  "last_name": "Johnson",
+  "email": "therock@example.com",
+  "password": "$2b$10$zZ9odKQyjqVrS5cDXn3YbuF7/0T65mQMcS/vlU0iL9x8G5qUWJUyK",
+  "createdAt": {
+    "$date": "2024-07-03T10:53:51.088Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-03T10:53:51.088Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66852dce68013c87c3aa92f9"
+  },
+  "first_name": "Paul",
+  "last_name": "Levesque",
+  "email": "tripleh@example.com",
+  "password": "$2b$10$bVrYFLykhlYdLD2cH0U5CuB8eUTzNbParN/mFrfM3GOS/HeSclZm6",
+  "createdAt": {
+    "$date": "2024-07-03T10:54:06.905Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-03T10:54:06.905Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66852dd968013c87c3aa92fb"
+  },
+  "first_name": "John",
+  "last_name": "Cena",
+  "email": "johncena@example.com",
+  "password": "$2b$10$zelsEQOWXfHNsdFftMtNIuiXhz9vdfiXDvhbauomRB7GKcUcK849u",
+  "createdAt": {
+    "$date": "2024-07-03T10:54:17.910Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-03T10:54:17.910Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66853020fabccab399b8e964"
+  },
+  "first_name": "Shiraz",
+  "last_name": "Mazhar",
+  "email": "shiraz@example.com",
+  "password": "$2b$10$XZ18NOhm/ENNReVyR8x32.11tuuLEx11Xzrl/9dDt8u4c380UicEC",
+  "createdAt": {
+    "$date": "2024-07-03T11:04:00.366Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-03T11:04:00.366Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686925a698f2ab77d4f4968"
+  },
+  "first_name": "Sheamus",
+  "last_name": "Clectic Warrior",
+  "email": "sheamus@example.com",
+  "password": "sheamus93434",
+  "createdAt": {
+    "$date": "2024-07-04T12:15:22.666Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T12:18:21.730Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6687d260d9cfdafa65f28a4e"
+  },
+  "first_name": "Mark",
+  "last_name": "Calway",
+  "email": "undertaker@example.com",
+  "password": "$2b$10$n7mIc3GcvmUZhzYfmvDlO.lnqhnOcuolOsOaK9Bp7vhZlO4xqqasi",
+  "createdAt": {
+    "$date": "2024-07-05T11:00:48.033Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-05T11:00:48.033Z"
+  },
+  "__v": 0
+}]

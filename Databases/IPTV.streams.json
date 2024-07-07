@@ -1,0 +1,152 @@
+[{
+  "_id": {
+    "$oid": "6686740ee50e291c39259e2d"
+  },
+  "episode_id": {
+    "$oid": "66866e879ad00019babb4139"
+  },
+  "user_id": {
+    "$oid": "66852c90ce208516b9a78780"
+  },
+  "time": "2024-07-04T10:30:00Z",
+  "createdAt": {
+    "$date": "2024-07-04T10:06:06.652Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T10:06:06.652Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66867438e50e291c39259e2f"
+  },
+  "episode_id": {
+    "$oid": "66866eb99ad00019babb413b"
+  },
+  "user_id": {
+    "$oid": "66852dbf68013c87c3aa92f7"
+  },
+  "time": "2024-07-04T12:15:00Z",
+  "createdAt": {
+    "$date": "2024-07-04T10:06:48.871Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T10:06:48.871Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66867475e50e291c39259e31"
+  },
+  "episode_id": {
+    "$oid": "66866ee29ad00019babb413d"
+  },
+  "user_id": {
+    "$oid": "66852dce68013c87c3aa92f9"
+  },
+  "time": "2024-07-04T13:45:00Z",
+  "createdAt": {
+    "$date": "2024-07-04T10:07:49.107Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T10:07:49.107Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6686748be50e291c39259e33"
+  },
+  "episode_id": {
+    "$oid": "66866f0d9ad00019babb413f"
+  },
+  "user_id": {
+    "$oid": "66852dd968013c87c3aa92fb"
+  },
+  "time": "2024-07-04T13:45:00Z",
+  "createdAt": {
+    "$date": "2024-07-04T10:08:11.718Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T10:08:11.718Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668674aee50e291c39259e35"
+  },
+  "episode_id": {
+    "$oid": "66866f419ad00019babb4141"
+  },
+  "user_id": {
+    "$oid": "66853020fabccab399b8e964"
+  },
+  "time": "2024-07-04T13:45:00Z",
+  "createdAt": {
+    "$date": "2024-07-04T10:08:46.875Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T10:08:46.875Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668689b0a7cfd0ae2ebeac56"
+  },
+  "episode_id": {
+    "$oid": "66866f0d9ad00019babb413f"
+  },
+  "user_id": {
+    "$oid": "66852c90ce208516b9a78780"
+  },
+  "time": "Cm_Punk_Stream2",
+  "createdAt": {
+    "$date": "2024-07-04T11:38:24.751Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-05T07:04:56.863Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668689cea7cfd0ae2ebeac58"
+  },
+  "episode_id": {
+    "$oid": "66866f0d9ad00019babb413f"
+  },
+  "user_id": {
+    "$oid": "66852c90ce208516b9a78780"
+  },
+  "time": "Punk_Stream2",
+  "createdAt": {
+    "$date": "2024-07-04T11:38:54.221Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T11:38:54.221Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6687d27dd9cfdafa65f28a50"
+  },
+  "episode_id": {
+    "$oid": "6687d204d9cfdafa65f28a4c"
+  },
+  "user_id": {
+    "$oid": "6687d260d9cfdafa65f28a4e"
+  },
+  "time": "Choke Slam time",
+  "createdAt": {
+    "$date": "2024-07-05T11:01:17.239Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-05T11:01:17.239Z"
+  },
+  "__v": 0
+}]

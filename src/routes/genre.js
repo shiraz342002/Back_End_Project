@@ -12,8 +12,9 @@ router.post("/",validate(GenreValidationSchema.create),GenreController.add)
 router.delete("/:id",GenreController.deleteFileById);
 router.patch("/:id",validate(GenreValidationSchema.update),GenreController.updateFileById)
 
-//Aggregation
+//Get All the series By Genre Id
 router.get("/:id/series",GenreController.getAllSeriesByGenreId)
+//Get All seasons of the series By Genre Id 
 router.get("/:id/series/seasons",GenreController.getAllSeasonOfAllSeriesByGenreId)
 
 

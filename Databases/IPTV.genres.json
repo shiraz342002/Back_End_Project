@@ -1,0 +1,143 @@
+[{
+  "_id": {
+    "$oid": "66864dc8be5366c1ad94a426"
+  },
+  "name": "Drama",
+  "createdAt": {
+    "$date": "2024-07-04T07:22:48.459Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T07:22:48.459Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66864dd3be5366c1ad94a428"
+  },
+  "name": "Horrorr",
+  "createdAt": {
+    "$date": "2024-07-04T07:22:59.500Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T12:21:04.554Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66864de0be5366c1ad94a42a"
+  },
+  "name": "Fantasy",
+  "createdAt": {
+    "$date": "2024-07-04T07:23:12.552Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T07:23:12.552Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66864de4be5366c1ad94a42c"
+  },
+  "name": "Action",
+  "createdAt": {
+    "$date": "2024-07-04T07:23:16.999Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T07:23:16.999Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66864de9be5366c1ad94a42e"
+  },
+  "name": "Science Fiction",
+  "createdAt": {
+    "$date": "2024-07-04T07:23:21.877Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T07:23:21.877Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66864df3be5366c1ad94a430"
+  },
+  "name": "Animated",
+  "createdAt": {
+    "$date": "2024-07-04T07:23:31.995Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T07:23:31.995Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66864df7be5366c1ad94a432"
+  },
+  "name": "Romance",
+  "createdAt": {
+    "$date": "2024-07-04T07:23:35.696Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T07:23:35.696Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66864dfdbe5366c1ad94a434"
+  },
+  "name": "Crime",
+  "createdAt": {
+    "$date": "2024-07-04T07:23:41.388Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T07:23:41.388Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66864e09be5366c1ad94a436"
+  },
+  "name": "Anime",
+  "createdAt": {
+    "$date": "2024-07-04T07:23:53.099Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T07:23:53.099Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66864ef406a3f58a1756716c"
+  },
+  "name": "Thriller",
+  "createdAt": {
+    "$date": "2024-07-04T07:27:48.649Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T07:27:48.649Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6687d09fd9cfdafa65f28a42"
+  },
+  "name": "Prison Break",
+  "createdAt": {
+    "$date": "2024-07-05T10:53:19.033Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-05T10:53:19.033Z"
+  },
+  "__v": 0
+}]

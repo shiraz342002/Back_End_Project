@@ -10,7 +10,9 @@ router.get("/:id",SeriesController.getById)
 router.post("/",validate(SeriesValidationSchema.create),SeriesController.add)
 router.delete("/:id",SeriesController.deleteFileById);
 router.patch("/:id",validate(SeriesValidationSchema.update),SeriesController.updateFileById)
+//Get all the Seasons of Series By Series Id
 router.get("/:id/seasons",SeriesController.getAllSeasonsOfSeriesBySeriesId)
+//Get All the Episodes of Series By Series Id
 router.get("/:id/seasons/episodes",SeriesController.getAllEpisodesOfSeriesById)
 
 

@@ -10,6 +10,8 @@ router.get("/:id",EpisodeController.getById)
 router.post("/",validate(EpisodeValidationSchema.create),EpisodeController.add)
 router.delete("/:id",EpisodeController.deleteFileById);
 router.patch("/:id",validate(EpisodeValidationSchema.update),EpisodeController.updateFileById)
+
+//Get Stream of Episode By Stream ID
 router.get("/:id/streams",EpisodeController.getStreamsOfEpisodeById)
 
 export default router

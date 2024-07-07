@@ -1,0 +1,162 @@
+[{
+  "_id": {
+    "$oid": "66866e879ad00019babb4139"
+  },
+  "season_id": {
+    "$oid": "668648873665cd74275cc26e"
+  },
+  "name": "Episode 1",
+  "description": "The very first episode of the season.",
+  "thumbnail_id": "668637b8f7e77ae34a7d3d78",
+  "createdAt": {
+    "$date": "2024-07-04T09:42:31.115Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-05T06:23:09.955Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66866eb99ad00019babb413b"
+  },
+  "season_id": {
+    "$oid": "668648873665cd74275cc26e"
+  },
+  "name": "Episode 2",
+  "description": "The second episode of the season.",
+  "thumbnail_id": "6686379bf7e77ae34a7d3d76",
+  "createdAt": {
+    "$date": "2024-07-04T09:43:21.532Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T09:43:21.532Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66866ee29ad00019babb413d"
+  },
+  "season_id": {
+    "$oid": "66865ad96e7e0df31ec53a03"
+  },
+  "name": "Episode 1",
+  "description": "The first episode of another season.",
+  "thumbnail_id": "668637c1f7e77ae34a7d3d7a",
+  "createdAt": {
+    "$date": "2024-07-04T09:44:02.958Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T09:44:02.958Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66866f0d9ad00019babb413f"
+  },
+  "season_id": {
+    "$oid": "66865ae26e7e0df31ec53a05"
+  },
+  "name": "Episode 1",
+  "description": "The first episode of yet another season.",
+  "thumbnail_id": "668637caf7e77ae34a7d3d7c",
+  "createdAt": {
+    "$date": "2024-07-04T09:44:45.858Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T09:44:45.858Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66866f419ad00019babb4141"
+  },
+  "season_id": {
+    "$oid": "668647dc3665cd74275cc266"
+  },
+  "name": "Episode 3",
+  "description": "The third episode of a different season.",
+  "thumbnail_id": "668637f4f7e77ae34a7d3d82",
+  "createdAt": {
+    "$date": "2024-07-04T09:45:37.198Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T09:45:37.198Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6687d204d9cfdafa65f28a4c"
+  },
+  "season_id": {
+    "$oid": "6687d1aed9cfdafa65f28a4a"
+  },
+  "name": "Episode 4",
+  "description": "The forth episode of a ShawShank Redemption season 1.",
+  "thumbnail_id": "6687d126d9cfdafa65f28a44",
+  "createdAt": {
+    "$date": "2024-07-05T10:59:16.289Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-05T10:59:16.289Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6687d3a9d9cfdafa65f28a58"
+  },
+  "season_id": {
+    "$oid": "6687d14ed9cfdafa65f28a46"
+  },
+  "name": "Episode 2",
+  "description": "The 2nd episode of a Shaw Shankn.",
+  "thumbnail_id": "6687d126d9cfdafa65f28a44",
+  "createdAt": {
+    "$date": "2024-07-05T11:06:17.835Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-05T11:06:17.835Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6687d3b0d9cfdafa65f28a5a"
+  },
+  "season_id": {
+    "$oid": "6687d14ed9cfdafa65f28a46"
+  },
+  "name": "Episode 3",
+  "description": "The three episode of a Shaw Shankn.",
+  "thumbnail_id": "6687d126d9cfdafa65f28a44",
+  "createdAt": {
+    "$date": "2024-07-05T11:06:24.228Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-05T11:06:24.228Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6687d3b7d9cfdafa65f28a5c"
+  },
+  "season_id": {
+    "$oid": "6687d14ed9cfdafa65f28a46"
+  },
+  "name": "Episode 4",
+  "description": "The forth episode of a Shaw Shankn.",
+  "thumbnail_id": "6687d126d9cfdafa65f28a44",
+  "createdAt": {
+    "$date": "2024-07-05T11:06:31.608Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-05T11:06:31.608Z"
+  },
+  "__v": 0
+}]

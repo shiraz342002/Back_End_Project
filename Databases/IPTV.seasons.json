@@ -1,0 +1,153 @@
+[{
+  "_id": {
+    "$oid": "66865aaf6e7e0df31ec539ff"
+  },
+  "series_id": {
+    "$oid": "668647dc3665cd74275cc266"
+  },
+  "name": "Season 1",
+  "description": "The first season of the boring series.",
+  "createdAt": {
+    "$date": "2024-07-04T08:17:51.201Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T08:22:43.893Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66865ac06e7e0df31ec53a01"
+  },
+  "series_id": {
+    "$oid": "668647dc3665cd74275cc266"
+  },
+  "name": "Season 2",
+  "description": "The second season of the series.",
+  "createdAt": {
+    "$date": "2024-07-04T08:18:08.044Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T08:18:08.044Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66865ad96e7e0df31ec53a03"
+  },
+  "series_id": {
+    "$oid": "668648273665cd74275cc268"
+  },
+  "name": "Season 1",
+  "description": "The first season of the series.",
+  "createdAt": {
+    "$date": "2024-07-04T08:18:33.180Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T08:18:33.180Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66865ae26e7e0df31ec53a05"
+  },
+  "series_id": {
+    "$oid": "6686483c3665cd74275cc26a"
+  },
+  "name": "Season 1",
+  "description": "The first season of the series.",
+  "createdAt": {
+    "$date": "2024-07-04T08:18:42.924Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T08:18:42.924Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66865aeb6e7e0df31ec53a07"
+  },
+  "series_id": {
+    "$oid": "668648553665cd74275cc26c"
+  },
+  "name": "Season 1",
+  "description": "The first season of the series.",
+  "createdAt": {
+    "$date": "2024-07-04T08:18:51.125Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T08:18:51.125Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66865af36e7e0df31ec53a09"
+  },
+  "series_id": {
+    "$oid": "668648873665cd74275cc26e"
+  },
+  "name": "Season 1",
+  "description": "The first season of the series.",
+  "createdAt": {
+    "$date": "2024-07-04T08:18:59.487Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T08:18:59.487Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66865b006e7e0df31ec53a0b"
+  },
+  "series_id": {
+    "$oid": "668648873665cd74275cc26e"
+  },
+  "name": "Season 3",
+  "description": "The Third season of the series.",
+  "createdAt": {
+    "$date": "2024-07-04T08:19:12.880Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T08:19:12.880Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6687d1aed9cfdafa65f28a4a"
+  },
+  "series_id": {
+    "$oid": "6687d14ed9cfdafa65f28a46"
+  },
+  "name": "Season 1",
+  "description": "The First sesaon of Shaw Shank Redemption",
+  "createdAt": {
+    "$date": "2024-07-05T10:57:50.551Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-05T10:57:50.551Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6687d378d9cfdafa65f28a55"
+  },
+  "series_id": {
+    "$oid": "6687d14ed9cfdafa65f28a46"
+  },
+  "name": "Season 2",
+  "description": "The 2nd season of the ShawShank Redemption.",
+  "createdAt": {
+    "$date": "2024-07-05T11:05:28.312Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-05T11:05:28.312Z"
+  },
+  "__v": 0
+}]
