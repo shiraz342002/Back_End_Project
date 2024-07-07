@@ -10,11 +10,10 @@ export const authenticate = (req, res, next) => {
 			"Need token (JWT) to hit this API",
 			"Access denied. No token provided."
 		);
-
 	const bearerToken = token.split(" ")[1];
-
 	try {
-		req.user = jwt.verify(bearerToken, config.env.jwtSecret);
+		const decoded = jwt.verify(bearerToken, config.env.jwtSecret);
+		req.user=decoded;
 		next();
 	} catch (error) {
 		httpResponse.UNAUTHORIZED(res, "Token is not valid", "Invalid token.");

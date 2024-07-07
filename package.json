@@ -1,28 +1,25 @@
 {
-  "name": "express-boilerplate",
+  "name": "back_end_project",
   "version": "1.0.0",
-  "description": "This is a boilerplate having basic features of a backend application",
-  "main": "src/index.js",
+  "description": "This is a boilerplate for backend project using ExpressJS, Joi, Mongoose, JWT, Bcrypt, Services, Controllers, Routes, etc.",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"
   },
-  "author": "@mrizwanashiq",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "helmet": "^4.6.0",
+    "helmet": "^7.1.0",
     "joi": "^17.13.3",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.13.0",
-    "password-hash": "^1.2.2"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15",
-    "prettier": "^2.5.1"
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.5",
+    "nodemon": "^3.1.4"
   }
 }
