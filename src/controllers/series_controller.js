@@ -3,7 +3,9 @@ import { httpResponse } from "../utils/httpResponse.js"
 export const SeriesController={
     getAll:async(req,res)=>{
         try{
-            const data = await SeriesService.getAll();
+            const page = parseInt(req.query.page) || 1;
+            const limit = parseInt(req.query.limit) || 10
+            const data = await SeriesService.getAll(page,limit);
             return httpResponse.SUCCESS(res,data);
         }catch(err){
             return httpResponse.INTERNAL_SERVER_ERROR(res,err);
@@ -19,7 +21,6 @@ export const SeriesController={
 	},
     add : async (req, res) => {
         try{
-          // console.log("adding");  
 			const data = await SeriesService.add(req.body)
 			return httpResponse.CREATED(res,data);
 		}catch(err){

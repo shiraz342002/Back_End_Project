@@ -27,8 +27,8 @@ const unProtectedRouter = express.Router();
 //just for testing purposes I'm including the protected routes as unprotected
 
 // Un-Protected Routes
-unProtectedRouter.use("/file",fileRoute)
 unProtectedRouter.use("/user", userRoute);
+unProtectedRouter.use("/file",fileRoute)
 unProtectedRouter.use("/series",seriesRoute)
 unProtectedRouter.use("/genre",genreRoute)
 unProtectedRouter.use("/genreseries",genreseriesRoute)

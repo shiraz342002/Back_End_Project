@@ -3,8 +3,10 @@ import { SeasonModel } from "../models/season.js";
 import { EpisodeModel } from "../models/episode.js";
 import { httpResponse } from "../utils/httpResponse.js";
 export const SeriesService={
-    getAll:async()=>{
-        return SeriesModel.find();
+    getAll:async(page,limit)=>{
+        const skip = (page - 1) * limit
+        const series = await SeriesModel.find().skip(skip).limit(limit);
+        return series;
     },
     getById:async(id)=>{
         return SeriesModel.findById(id)
