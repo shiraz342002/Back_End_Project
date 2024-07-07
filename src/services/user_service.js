@@ -6,17 +6,27 @@ export const UserService = {
 	getAll: async () => {
 		return UserModel.find();
 	},
-	getById:async(id)=>{
-		return UserModel.findById(id);
+	getByToken:async(data)=>{		
+		const userData = {
+				first_name: data.user.first_name,
+				last_name: data.user.last_name,
+				email: data.user.email,
+			}
+	console.log(userData);
+	
+	return userData
 	},
 	add: async (body) => {
 		return UserModel.create(body);
 	},
-	update:async(id,data)=>{
-		return UserModel.findByIdAndUpdate(id,data);
+	update:async(old_data,new_data)=>{	
+		const userid=old_data.user._id;
+		// console.log(new_data);
+		// console.log(userid);
+		return UserModel.findByIdAndUpdate(userid,new_data,{ new: true });
 	},
-	delete:async(id)=>{
-		return UserModel.findByIdAndDelete(id);
+	delete:async(data)=>{
+		return UserModel.findByIdAndDelete(data.user._id);
 	},
 	login:async(body)=>{
 		return UserModel.findOne({email:body.email});
@@ -31,9 +41,7 @@ export const UserService = {
 		return StreamModel.findOneAndDelete({ _id: stream_id, user_id: user_id });
 	  },
 	  getOneStreamByUserId: async (user_id, stream_id) => {
-	console.log('ok ', new mongoose.Types.ObjectId(stream_id));
-	// console.log("Im running");
-	
+
 		return StreamModel.aggregate([
 			{
 			$match: {
@@ -42,10 +50,6 @@ export const UserService = {
 				},
 			},
 	]);
-		//   const stream = await StreamModel.findOne({
-		// 	_id: stream_id,
-		// 	user_id: user_id
-		// });
-		// return stream;
+		
 	},
 };

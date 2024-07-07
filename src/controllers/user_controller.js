@@ -14,11 +14,9 @@ export const UserController = {
 		}
 	},
 
-	getById:async(req,res)=>{
+	getByToken:async(req,res)=>{
 		try{
-			console.log("Hello");
-			
-			const data = await UserService.getById(req.params.id)
+			const data = await UserService.getByToken(req.user)
 			return httpResponse.SUCCESS(res,data);
 		}catch(err){
 			return httpResponse.INTERNAL_SERVER_ERROR(res,err)
@@ -37,7 +35,7 @@ export const UserController = {
 	},
 	delete:async(req,res)=>{
 		try{
-			const data = await UserService.delete(req.params.id)
+			const data = await UserService.delete(req.user)
 			return httpResponse.SUCCESS(res,data)
 		}catch(err){
 			return httpResponse.INTERNAL_SERVER_ERROR(res,err)
@@ -45,7 +43,7 @@ export const UserController = {
 	},
 	update:async(req,res)=>{
 		try{
-			const data= await UserService.update(req.params.id,req.body);
+			const data= await UserService.update(req.user,req.body);
 			return httpResponse.SUCCESS(res,data);
 		}catch(err){
 			return httpResponse.INTERNAL_SERVER_ERROR(res,err);
