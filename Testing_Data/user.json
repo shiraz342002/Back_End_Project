@@ -36,6 +36,12 @@
       "last_name": "Admin",
       "email": "admin@example.com",
       "password": "mercurysols123"
+    },
+    {
+      "first_name": "Umair",
+      "last_name": "Bhai",
+      "email": "umair@example.com",
+      "password": "umairmercurysols123"
     }
   ]
   

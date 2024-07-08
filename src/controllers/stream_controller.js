@@ -4,7 +4,7 @@ export const StreamController={
     getAll:async(req,res)=>{
       try{
         const page = parseInt(req.query.page) || 1;
-        const limit = parseInt(req.query.limit) || 5
+        const limit = parseInt(req.query.limit) || 10;
         const sortBy = req.query.sortBy || 'createdAt';
         const order = req.query.order || 'asc';
         const data = await StreamService.getAll(page,limit,sortBy,order);
@@ -23,7 +23,7 @@ export const StreamController={
 	},
     add : async (req, res) => {
         try{
-          console.log("adding");  
+          // console.log("adding");  
 			const data = await StreamService.add(req.body)
 			return httpResponse.CREATED(res,data);
 		}catch(err){
@@ -38,7 +38,6 @@ export const StreamController={
             }
             return httpResponse.SUCCESS(res, file);
         } catch (err) {
-            console.error(err);
             return httpResponse.INTERNAL_SERVER_ERROR(res, err.message);
         }
     },
@@ -48,14 +47,12 @@ export const StreamController={
           if (!file) {
             return httpResponse.NOT_FOUND(res, "File not found");
           }
-        // console.log("file found");
           const deletedFile = await StreamService.delete(req.params.id)
           if (!deletedFile) {
             return httpResponse.INTERNAL_SERVER_ERROR(res, "Failed to delete file");
           }
           return httpResponse.SUCCESS(res, deletedFile);
         } catch (err) {
-          console.error("Error deleting file:", err);
           return httpResponse.INTERNAL_SERVER_ERROR(res, err);
         }
       },
