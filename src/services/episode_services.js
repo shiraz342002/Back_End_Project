@@ -1,8 +1,10 @@
 import {EpisodeModel} from "../models/episode.js"
 import { StreamModel } from "../models/stream.js";
 export const EpisodeService={
-    getAll:async()=>{
-        return EpisodeModel.find();
+    getAll:async(page,limit)=>{
+        const skip = (page - 1) * limit
+        const episode = await EpisodeModel.find().skip(skip).limit(limit);
+        return episode;
     },
     getById:async(id)=>{
         return EpisodeModel.findById(id)

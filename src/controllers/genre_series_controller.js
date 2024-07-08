@@ -1,14 +1,16 @@
 import {GenreSeriesServices} from "../services/index.js"
 import { httpResponse } from "../utils/httpResponse.js"
 export const GenreSeriesController={
-    getAll:async(req,res)=>{
-        try{
-            const data = await GenreSeriesServices.getAll();
-            return httpResponse.SUCCESS(res,data);
-        }catch(err){
-            return httpResponse.INTERNAL_SERVER_ERROR(res,err);
-        }
-    },
+  getAll:async(req,res)=>{
+    try{
+        const page = parseInt(req.query.page) || 1;
+        const limit = parseInt(req.query.limit) || 5
+        const data = await GenreSeriesServices.getAll(page,limit);
+        return httpResponse.SUCCESS(res,data);
+    }catch(err){
+        return httpResponse.INTERNAL_SERVER_ERROR(res,err);
+    }
+},
     getById:async(req,res)=>{
 		try{
       // console.log("getbyid");

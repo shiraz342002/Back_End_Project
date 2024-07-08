@@ -1,14 +1,16 @@
 import {EpisodeService} from "../services/index.js"
 import { httpResponse } from "../utils/httpResponse.js"
 export const EpisodeController={
-    getAll:async(req,res)=>{
-        try{
-            const data = await EpisodeService.getAll();
-            return httpResponse.SUCCESS(res,data);
-        }catch(err){
-            return httpResponse.INTERNAL_SERVER_ERROR(res,err);
-        }
-    },
+  getAll:async(req,res)=>{
+    try{
+        const page = parseInt(req.query.page) || 1;
+        const limit = parseInt(req.query.limit) || 5
+        const data = await EpisodeService.getAll(page,limit);
+        return httpResponse.SUCCESS(res,data);
+    }catch(err){
+        return httpResponse.INTERNAL_SERVER_ERROR(res,err);
+    }
+},
     getById:async(req,res)=>{
 		try{
 			const data = await EpisodeService.getById(req.params.id)

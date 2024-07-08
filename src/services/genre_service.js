@@ -6,9 +6,11 @@ export const GenreServices = {
   add:async (data) => {
     return GenreModel.create(data);
   },
-  getAll:async () => {
-    return GenreModel.find();
-  },
+  getAll:async(page,limit)=>{
+    const skip = (page - 1) * limit
+    const genre = await GenreModel.find().skip(skip).limit(limit);
+    return genre;
+},
   getById:async (id) => {
     return GenreModel.findById(id);
   },

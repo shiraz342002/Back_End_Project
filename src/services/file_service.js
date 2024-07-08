@@ -1,7 +1,9 @@
 import {FileModel} from "../models/file.js"
 export const FileService={
-    getAll:async()=>{
-        return FileModel.find();
+    getAll:async(page,limit)=>{
+        const skip= (page-1)*limit;
+        const files= await FileModel.find().skip(skip).limit(limit)
+        return files;
     },
     getById:async(id)=>{
         return FileModel.findById(id)

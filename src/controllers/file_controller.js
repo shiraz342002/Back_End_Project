@@ -3,7 +3,9 @@ import { httpResponse } from "../utils/httpResponse.js";
 export const FileController = {
     getAll: async (req, res) => {
 		try {
-			const data = await FileService.getAll();
+      const page = parseInt(req.query.page) || 1;
+      const limit = parseInt(req.query.limit) || 5;
+			const data = await FileService.getAll(page,limit);
 			return httpResponse.SUCCESS(res, data);
 		} catch (err) {
 			return httpResponse.INTERNAL_SERVER_ERROR(res, err);
