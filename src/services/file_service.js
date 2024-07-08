@@ -1,6 +1,6 @@
 import {FileModel} from "../models/file.js"
 export const FileService={
-    getAll:async(page,limit)=>{
+    getAll:async(page,limit,sortBy,order)=>{
         const skip = (page - 1) * limit
         let sortOrder;
         if (order === 'asc') {

@@ -1,7 +1,8 @@
 import {EpisodeModel} from "../models/episode.js"
 import { StreamModel } from "../models/stream.js";
 export const EpisodeService={
-    getAll:async(page,limit)=>{
+    getAll:async(page,limit,sortBy,order)=>{
+        console.log("Getting episodes");
         const skip = (page - 1) * limit
         let sortOrder;
         if (order === 'asc') {
@@ -9,6 +10,8 @@ export const EpisodeService={
          } else {
             sortOrder = -1;
         }
+        console.log("Getting episodes");
+        
         const episode = await EpisodeModel.find().sort({ [sortBy]: sortOrder }).skip(skip).limit(limit);
         return episode;
     },
