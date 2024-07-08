@@ -14,8 +14,6 @@ router.patch("/:id",validate(SeriesValidationSchema.update),SeriesController.upd
 router.get("/:id/seasons",SeriesController.getAllSeasonsOfSeriesBySeriesId)
 //Get All the Episodes of Series By Series Id
 router.get("/:id/seasons/episodes",SeriesController.getAllEpisodesOfSeriesById)
-
-
 export default router
 
 //Notes

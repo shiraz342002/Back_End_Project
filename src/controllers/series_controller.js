@@ -4,7 +4,7 @@ export const SeriesController={
     getAll:async(req,res)=>{
         try{
             const page = parseInt(req.query.page) || 1;
-            const limit = parseInt(req.query.limit) || 10
+            const limit = parseInt(req.query.limit) || 5
             const data = await SeriesService.getAll(page,limit);
             return httpResponse.SUCCESS(res,data);
         }catch(err){

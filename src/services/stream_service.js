@@ -6,8 +6,10 @@ import { GenreSeriesModel } from "../models/genre_series.js";
 import { GenreModel } from "../models/genre.js";
 // import { UserModel } from "../models/user.js";
 export const StreamService={
-    getAll:async()=>{
-        return StreamModel.find();
+    getAll:async(page,limit)=>{
+        const skip = (page - 1) * limit
+        const stream = await StreamModel.find().skip(skip).limit(limit);
+        return stream;
     },
     getById:async(id)=>{
         return StreamModel.findById(id)
