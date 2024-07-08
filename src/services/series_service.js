@@ -3,9 +3,17 @@ import { SeasonModel } from "../models/season.js";
 import { EpisodeModel } from "../models/episode.js";
 import { httpResponse } from "../utils/httpResponse.js";
 export const SeriesService={
-    getAll:async(page,limit)=>{
+    getAll:async(page,limit,sortBy,order)=>{
         const skip = (page - 1) * limit
-        const series = await SeriesModel.find().skip(skip).limit(limit);
+        console.log(sortBy);
+        console.log(order);
+        let sortOrder;
+        if (order === 'asc') {
+         sortOrder = 1;
+         } else {
+            sortOrder = -1;
+        }
+        const series = await SeriesModel.find().sort({ [sortBy]: sortOrder }).skip(skip).limit(limit);
         return series;
     },
     getById:async(id)=>{
