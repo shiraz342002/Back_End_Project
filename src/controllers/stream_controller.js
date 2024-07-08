@@ -15,6 +15,7 @@ export const StreamController={
     },
     getById:async(req,res)=>{
 		try{
+      
 			const data = await StreamService.getById(req.params.id)
 			return httpResponse.SUCCESS(res,data);
 		}catch(err){
@@ -23,8 +24,9 @@ export const StreamController={
 	},
     add : async (req, res) => {
         try{
-          // console.log("adding");  
-			const data = await StreamService.add(req.body)
+          const { episode_id, time } = req.body;
+          const user_id = req.user.user._id;
+      const data = await StreamService.add({ episode_id, user_id, time });
 			return httpResponse.CREATED(res,data);
 		}catch(err){
 			return httpResponse.INTERNAL_SERVER_ERROR(res,err)

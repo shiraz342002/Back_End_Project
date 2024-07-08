@@ -14,13 +14,13 @@ const protectedRouter = express.Router();
 const unProtectedRouter = express.Router();
 
 // Protected Routes
-// protectedRouter.use("/file",fileRoute)
-// protectedRouter.use("/series",seriesRoute)
-// protectedRouter.use("/genre",genreRoute)
-// protectedRouter.use("/genreseries",genreseriesRoute)
-// protectedRouter.use("/season",seasonRoute)
-// protectedRouter.use("/episode",episodeRoute)
-// protectedRouter.use("/stream",streamRoute)
+protectedRouter.use("/file",fileRoute)
+protectedRouter.use("/series",seriesRoute)
+protectedRouter.use("/genre",genreRoute)
+protectedRouter.use("/genreseries",genreseriesRoute)
+protectedRouter.use("/season",seasonRoute)
+protectedRouter.use("/episode",episodeRoute)
+protectedRouter.use("/stream",streamRoute)
 
 
 // Note
@@ -28,15 +28,4 @@ const unProtectedRouter = express.Router();
 
 // Un-Protected Routes
 unProtectedRouter.use("/user", userRoute);
-unProtectedRouter.use("/file",fileRoute)
-unProtectedRouter.use("/series",seriesRoute)
-unProtectedRouter.use("/genre",genreRoute)
-unProtectedRouter.use("/genreseries",genreseriesRoute)
-unProtectedRouter.use("/season",seasonRoute)
-unProtectedRouter.use("/episode",episodeRoute)
-unProtectedRouter.use("/streams",streamRoute)
-
-
-
-
 export { protectedRouter, unProtectedRouter };
