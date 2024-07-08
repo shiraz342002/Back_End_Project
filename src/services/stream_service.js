@@ -6,9 +6,15 @@ import { GenreSeriesModel } from "../models/genre_series.js";
 import { GenreModel } from "../models/genre.js";
 // import { UserModel } from "../models/user.js";
 export const StreamService={
-    getAll:async(page,limit)=>{
-        const skip = (page - 1) * limit
-        const stream = await StreamModel.find().skip(skip).limit(limit);
+    getAll:async(page,limit,sortBy,order)=>{
+        const skip = (page - 1) * limit;
+        let sortOrder;
+        if (order === 'asc') {
+         sortOrder = 1;
+         } else {
+            sortOrder = -1;
+        }
+        const stream = await StreamModel.find().sort({ [sortBy]: sortOrder }).skip(skip).limit(limit);
         return stream;
     },
     getById:async(id)=>{

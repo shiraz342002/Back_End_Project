@@ -3,8 +3,16 @@ import { StreamModel } from "../models/stream.js";
 import mongoose from "mongoose";
 
 export const UserService = {
-	getAll: async () => {
-		return UserModel.find();
+	getAll: async (page,limit,sortBy,order) => {
+		const skip = (page - 1) * limit
+        let sortOrder;
+        if (order === 'asc') {
+         sortOrder = 1;
+         } else {
+            sortOrder = -1;
+        }
+        const users = await UserModel.find().sort({ [sortBy]: sortOrder }).skip(skip).limit(limit);
+        return users;
 	},
 	getByToken:async(data)=>{		
 		const userData = {

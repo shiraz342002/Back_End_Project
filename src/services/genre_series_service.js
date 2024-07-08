@@ -5,7 +5,13 @@ export const GenreSeriesServices = {
   },
   getAll:async(page,limit)=>{
     const skip = (page - 1) * limit
-    const genre_series = await GenreSeriesModel.find().skip(skip).limit(limit);
+    let sortOrder;
+    if (order === 'asc') {
+     sortOrder = 1;
+     } else {
+        sortOrder = -1;
+    }
+    const genre_series = await GenreSeriesModel.find().sort({ [sortBy]: sortOrder }).skip(skip).limit(limit);
     return genre_series;
 },
   getById:async (id) => {

@@ -1,8 +1,14 @@
 import {FileModel} from "../models/file.js"
 export const FileService={
     getAll:async(page,limit)=>{
-        const skip= (page-1)*limit;
-        const files= await FileModel.find().skip(skip).limit(limit)
+        const skip = (page - 1) * limit
+        let sortOrder;
+        if (order === 'asc') {
+         sortOrder = 1;
+         } else {
+            sortOrder = -1;
+        }
+        const files = await FileModel.find().sort({ [sortBy]: sortOrder }).skip(skip).limit(limit);
         return files;
     },
     getById:async(id)=>{

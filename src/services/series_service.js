@@ -5,8 +5,6 @@ import { httpResponse } from "../utils/httpResponse.js";
 export const SeriesService={
     getAll:async(page,limit,sortBy,order)=>{
         const skip = (page - 1) * limit
-        console.log(sortBy);
-        console.log(order);
         let sortOrder;
         if (order === 'asc') {
          sortOrder = 1;

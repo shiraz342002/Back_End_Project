@@ -7,7 +7,11 @@ import  jwt  from "jsonwebtoken";
 export const UserController = {
 	getAll: async (req, res) => {
 		try {
-			const data = await UserService.getAll();
+			const page = parseInt(req.query.page) || 1;
+            const limit = parseInt(req.query.limit) || 5;
+			const sortBy = req.query.sortBy || 'createdAt';
+            const order = req.query.order || 'asc';
+			const data = await UserService.getAll(page,limit,sortBy,order);
 			return httpResponse.SUCCESS(res, data);
 		} catch (err) {
 			return httpResponse.INTERNAL_SERVER_ERROR(res, err);
@@ -54,8 +58,7 @@ export const UserController = {
 		  const exist_user = await UserService.login(req.body);
 		  if (!exist_user) {
 			return httpResponse.NOT_FOUND(res, "User not found");
-		  }
-	  
+		  }  
 		  const auth = await bcrypt.compare(req.body.password, exist_user.password);
 		  if (auth) {
 			const j_token = jwt.sign({ user: exist_user }, config.env.jwtSecret);
@@ -73,7 +76,6 @@ export const UserController = {
 	getAllStreamById:async(req,res)=>{
 		try{
 			const data = await UserService.getAllStreamById(req.params.id)
-			// res.json(data)
 			return httpResponse.SUCCESS(res,data);
 		}catch(err){
 			return httpResponse.INTERNAL_SERVER_ERROR(res,err);

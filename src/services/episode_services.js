@@ -3,7 +3,13 @@ import { StreamModel } from "../models/stream.js";
 export const EpisodeService={
     getAll:async(page,limit)=>{
         const skip = (page - 1) * limit
-        const episode = await EpisodeModel.find().skip(skip).limit(limit);
+        let sortOrder;
+        if (order === 'asc') {
+         sortOrder = 1;
+         } else {
+            sortOrder = -1;
+        }
+        const episode = await EpisodeModel.find().sort({ [sortBy]: sortOrder }).skip(skip).limit(limit);
         return episode;
     },
     getById:async(id)=>{

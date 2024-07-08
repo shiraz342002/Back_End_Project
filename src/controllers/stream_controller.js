@@ -5,7 +5,9 @@ export const StreamController={
       try{
         const page = parseInt(req.query.page) || 1;
         const limit = parseInt(req.query.limit) || 5
-        const data = await StreamService.getAll(page,limit);
+        const sortBy = req.query.sortBy || 'createdAt';
+        const order = req.query.order || 'asc';
+        const data = await StreamService.getAll(page,limit,sortBy,order);
         return httpResponse.SUCCESS(res,data);
     }catch(err){
         return httpResponse.INTERNAL_SERVER_ERROR(res,err);
